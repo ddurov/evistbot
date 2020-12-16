@@ -7818,7 +7818,7 @@ if ($data->type == 'message_new') {
                             $name = $getInfo[0]['first_name'];
                             $pname = $getInfo[0]['last_name'];
     
-                            $vk->sendMessage($peer_id, 'Покупка ' . $amount . ' коинов.' . PHP_EOL . 'Ссылка для покупки (ТОЛЬКО ДЛЯ @id' . $from_id . ' (' . $name . ' ' . $pname . ')): https://evistbot.space/redirect.php?vkid=vk.com/id' . $from_id . '&coins=' . $amount, ['disable_mentions' => '1']);
+                            $vk->sendMessage($peer_id, 'Покупка ' . $amount . ' коинов.' . PHP_EOL . 'Ссылка для покупки (ТОЛЬКО ДЛЯ @id' . $from_id . ' (' . $name . ' ' . $pname . ')): https://domain.com/path/to/redirect.php?vkid=vk.com/id' . $from_id . '&coins=' . $amount, ['disable_mentions' => '1']);
     
                         } else {
     
