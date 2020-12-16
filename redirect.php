@@ -22,8 +22,8 @@
 
     if ($_GET['coins'] && $_GET['vkid']):
         
-        $public_key = "303761-83824"; 
-        $secret_key = "721fa1c0d88b91d6d7314d3ca935cbaa"; 
+        $public_key = "Айди магазина"; 
+        $secret_key = "СЕКРЕТНЫЙ КЛЮЧ МАГАЗИНА UnitPay"; 
         $amount = $_GET['coins'];
         $amount = $amount * 1.2;
         $uid = $_GET['vkid'];
