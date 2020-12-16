@@ -22,7 +22,7 @@
 
     if ($_GET['coins'] && $_GET['vkid']):
         
-        $public_key = "Айди магазина"; 
+        $public_key = "ПУБЛИЧНЫЙ КЛЮЧ МАГАЗИНА UnitPay"; 
         $secret_key = "СЕКРЕТНЫЙ КЛЮЧ МАГАЗИНА UnitPay"; 
         $amount = $_GET['coins'];
         $amount = $amount * 1.2;
