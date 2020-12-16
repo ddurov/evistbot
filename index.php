@@ -37,7 +37,7 @@ $invite      = $data->object->message->action->type;
 $check       = $data->object->message->action->member_id;
 $from_id_fwd = $data->object->message->reply_message->from_id;
 $per_text    = $data->object->message->reply_message->text;
-$chat_id     = $peer_id - 2000000000;
+$chat_id     = $peer_id - 2e9;
 $original    = $message;
 $message     = mb_strtolower($message);
 $cmd         = explode(" ", $message);
@@ -46,13 +46,7 @@ $cmdobr      = explode(" ", $message, 2);
 $cmdobrorig  = explode(" ", $original, 2);
 
 if (isset($data->object->message->payload)) {
-
-    $payload = json_decode($data->object->message->payload, True);
-
-} else {
-
-    $payload = null;
-
+    $payload = json_decode($data->object->message->payload, true) ?? null;
 }
 
 $payload = $payload['command'];
@@ -60,9 +54,7 @@ $payload = $payload['command'];
 
 // ФУНКЦИИ
 
-function logg($text) {
-
-    global $chat_id;
+function logg($text) use ($chat_id) {
 
     file_put_contents(__DIR__ . DIRECTORY_SEPARATOR . 'log.txt', "[".date('d.m.y H:i:s')."] [ID: $chat_id] Текст: " .$text."\n", FILE_APPEND);
 
@@ -6173,7 +6165,7 @@ if ($data->type == 'message_new') {
                                 $name = $getInfo[0]['first_name'];
                                 $pname = $getInfo[0]['last_name'];
     
-                                $vk->sendMessage($peer_id, 'Покупка ' . $amount . ' коинов.' . PHP_EOL . 'Ссылка для покупки (ТОЛЬКО ДЛЯ @id' . $from_id . ' (' . $name . ' ' . $pname . ')): https://domain.com/path/to/redirect.php?vkid=https://vk.com/id' . $from_id . '&coins=' . $amount, ['disable_mentions' => '1']);
+                                $vk->sendMessage($peer_id, 'Покупка ' . $amount . ' коинов.' . PHP_EOL . 'Ссылка для покупки (ТОЛЬКО ДЛЯ @id' . $from_id . ' (' . $name . ' ' . $pname . ')): https://evistbot.space/redirect.php?vkid=https://vk.com/id' . $from_id . '&coins=' . $amount, ['disable_mentions' => '1']);
     
                             } else {
     
