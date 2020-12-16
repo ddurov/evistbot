@@ -1,0 +1,47 @@
+[
+    {
+        "name": "krugozor/database",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Vasiliy-Makogon/Database.git",
+            "reference": "5081f3758d62508741bc2f8531c8d6433a11434c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Vasiliy-Makogon/Database/zipball/5081f3758d62508741bc2f8531c8d6433a11434c",
+            "reference": "5081f3758d62508741bc2f8531c8d6433a11434c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2017-12-19T19:05:12+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Krugozor\\Database\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Vasiliy Makogon",
+                "email": "makogon-vs@yandex.ru"
+            }
+        ],
+        "keywords": [
+            "database",
+            "mysql",
+            "mysqli",
+            "placeholder",
+            "placeholders",
+            "prepare statement"
+        ]
+    }
+]
