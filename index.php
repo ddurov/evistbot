@@ -115,7 +115,7 @@ if ($data->type == 'message_new') {
                             $report_name = $report[0]['first_name'];
                             $report_pname = $report[0]['last_name'];
     
-                            $vk->sendMessage(2000000317, 'Новый репорт от @id' . $from_id . ' (' . $report_name . ' ' . $report_pname . ')' . ' c номером ' . $report_id . ', вот его текст: ' . $reporttext . PHP_EOL . 'Для ответа используйте: /ответ {номер репорта} {ваш ответ}');
+                            $vk->sendMessage(АЙДИ ВАШЕЙ АДМИН БЕСЕДЫ, 'Новый репорт от @id' . $from_id . ' (' . $report_name . ' ' . $report_pname . ')' . ' c номером ' . $report_id . ', вот его текст: ' . $reporttext . PHP_EOL . 'Для ответа используйте: /ответ {номер репорта} {ваш ответ}');
     
                         } elseif ($getanswer && $answer !== 'none') {
     
