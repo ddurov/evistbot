@@ -1,23 +1,15 @@
 <?php 
 
     function logg($text) {
-
         file_put_contents(__DIR__ . DIRECTORY_SEPARATOR . 'log.txt', $text."\n", FILE_APPEND);
-
     }
     
     if (!is_numeric($_GET['coins']) && $_GET['coins']) {
-    
-        echo 'Привет! Ты в запросе указал кое - что не правильно.';
-        return;
-    
+        die('Привет! Ты в запросе указал кое - что не правильно.');
     }
     
     if (!$_GET['coins'] || !$_GET['vkid']) {
-        
-        echo 'Привет! Ты в запросе забыл указать кое-что';
-        return;
-        
+        die('Привет! Ты в запросе забыл указать кое-что');  
     }
 
     if ($_GET['coins'] && $_GET['vkid']):
