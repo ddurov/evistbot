@@ -31,10 +31,10 @@
             $desc = "Покупка " . $_GET['coins'] . " коинов";
             
         }
-        $mysqli = new mysqli('localhost', 'wordpress1', 'wrldpress1', 'wordprss1'); 
+        $mysqli = new mysqli('localhost', 'user', 'password', 'db_name'); 
         if (mysqli_connect_errno()) {
     
-            die("error_connect");
+            die("Ошибка подключения базы данных");
     
         }
         $qu = "INSERT INTO `unitpay` (`uid`, `amount`, `product`) VALUES ('$uid', '$amount', '".$_GET['coins']."')";
